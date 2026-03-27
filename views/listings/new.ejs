@@ -1,0 +1,123 @@
+<% layout("layouts/boiler") -%>
+
+<div class="form-container">
+
+<h2>Create New Listing</h2>
+
+<form action="/listing/new" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="title">Title</label>
+
+        <input 
+        type="text" 
+        id="title" 
+        name="listing[title]" 
+        placeholder="Enter title" 
+        required>
+
+        <div class="invalid-feedback">
+            Please enter a title.
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="description">Description</label>
+
+        <textarea 
+        id="description" 
+        name="listing[description]" 
+        rows="4" 
+        required></textarea>
+
+        <div class="invalid-feedback">
+            Please provide a description.
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="image">Uplode image</label>
+        <input 
+        type="file" 
+        id="image" 
+        name="listing[image]" 
+        placeholder="Image link">
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+
+        <input 
+        type="text" 
+        id="location" 
+        name="listing[location]" 
+        required>
+
+        <div class="invalid-feedback">
+            Please provide a location.
+        </div>
+    </div>
+    <div class="form-group">
+    <label for="category">Category</label>
+
+    <select id="category" name="listing[category]" required>
+        <option value="">Select Category</option>
+        <option value="Rooms">Rooms</option>
+        <option value="Mountain">Mountain</option>
+        <option value="Castle">Castle</option>
+        <option value="Beach">Beach</option>
+        <option value="Farm">Farm</option>
+        <option value="Arctic">Arctic</option>
+        <option value="Camping">Camping</option>
+        <option value="Forest">Forest</option>
+    </select>
+
+    <div class="invalid-feedback">
+        Please select a category.
+    </div>
+</div>
+
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label for="price">Price</label>
+
+            <input 
+            type="number" 
+            id="price" 
+            name="listing[price]" 
+            required>
+
+            <div class="invalid-feedback">
+                Please enter a valid price.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="country">Country</label>
+
+            <input 
+            type="text" 
+            id="country" 
+            name="listing[country]" 
+            required>
+
+            <div class="invalid-feedback">
+                Please provide a country.
+            </div>
+        </div>
+
+    </div>
+
+
+    <button class="submit-btn" type="submit">
+        Add Listing
+    </button>
+
+</form>
+
+</div>

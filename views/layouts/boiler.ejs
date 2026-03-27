@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="/css/err.css">
+      <link rel="stylesheet" href="/css/show.css">
+     <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/newform.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/nav_style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/flash.css">
+    <link rel="stylesheet" href="/css/rating.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
+ 
+<style>
+  html, body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+.main-content{
+    flex:1;
+}
+</style>
+</head>
+<body>
+     <%- include("../nav/navcon.ejs")%>
+
+     <main class="main-content">
+       
+        <div class="container" >
+               <%- include("../listings/flash.ejs")%>
+            <%- body %>
+        </div>
+     </main>
+
+     <%- include("../footer/dfooter.ejs")%>
+
+     <script src="/js/nav_app.js"></script>
+     <script src="/js/map.js"></script>
+   
+</body>
+</html>

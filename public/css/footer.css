@@ -1,0 +1,35 @@
+.footer{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.fname{
+    border: 1px solid black; 
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 60px;
+    width: 100%; 
+}
+
+.f-second{
+    display: flex;
+    align-items: center;
+    justify-content:space-around
+}
+.social_media,.t_c{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.social_media div{
+    margin: 15px;
+}
+
+.t_c div{
+   margin: 20px; 
+}

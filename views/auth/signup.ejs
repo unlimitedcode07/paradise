@@ -1,0 +1,36 @@
+<% layout("layouts/boiler") -%>
+ <div class="form-container">
+    <h1>this is signup</h1>
+       <form action="/test/signup" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+           <label for="username">Username</label>
+            <input 
+            type="text" 
+            id="username" 
+            name="User[username]" 
+            required>
+        </div>
+         <div class="form-group">
+           <label for="email">email</label>
+            <input 
+            type="email" 
+            id="email" 
+            name="User[email]" 
+            required>
+        </div>
+         <div class="form-group">
+           <label for="password">password</label>
+            <input 
+            type="password" 
+            id="password" 
+            name="User[password]" 
+            required>
+        </div>
+         <div>
+            <button type="submit" class="submit-btn">
+                create
+            </button>
+         </div>
+         
+       </form>
+ </div>

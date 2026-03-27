@@ -1,0 +1,65 @@
+
+
+  <div class="whole-nav">
+   <nav>
+    <div class="navcont">
+
+      <div class="logo">  
+         <i class="fa-solid fa-archway fa-2x"></i>
+      </div>
+      <div class="nav-search">
+  <form action="/listing" method="GET">
+    <input 
+      type="text" 
+      name="search" 
+      placeholder="Search by location or title..."
+    >
+    <button type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+</div>
+
+      <div class="nav-topic">
+        <h3><a href="/listing">Home</a></h3>
+        <h3><a href="/listing">ALL Listing</a></h3>
+        <h3><a href="/listing/new">Create listings</a></h3>
+        <% if(!currentUser){%>
+          <h3><a href="/test/signup">Signup</a></h3>
+          <h3><a href="/test/login">login</a></h3>
+       <% } %>
+          <% if(currentUser){ %>
+             <h3><a href="/test/logout">logout</a></h3>
+         <% } %>
+      </div>
+
+      <div class="hamberger">
+       <div class="arrow">
+       <i class="fa-solid fa-angles-down"></i>
+       </div>
+      <div class="arrow">
+       <i class="fa-solid fa-angles-down"></i>
+      </div>   
+       </div>
+
+    </div>
+     
+   </nav>
+   <div class="outside " >
+    <div class="nav-down"><h3><a href="/listing">Home</a></h3></div>
+    <div class="nav-down"><h3><a href="/listing">ALL Listing</a></h3></div>
+    <div class="nav-down"><h3><a href="/listing/new">Create listings</a></h3></div>
+    <% if(!currentUser){%>
+          <div class="nav-down"><h3><a href="/test/signup">Signup</a></h3></div>
+          <div class="nav-down"><h3><a href="/test/login">login</a></h3></div>
+       <% } %>
+          <% if(currentUser){ %>
+             <div class="nav-down"><h3><a href="/test/logout">logout</a></h3></div>
+         <% } %>
+
+    </div>
+   </div>
+
+
+   
+

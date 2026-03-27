@@ -1,0 +1,92 @@
+<% layout("layouts/boiler") -%>
+
+<div class="form-container">
+
+    <h2>Edit Listing</h2>
+
+    <form action="/listing/edit/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input 
+                type="text"
+                id="title"
+                name="listing[title]"
+                value="<%= result.title %>"
+                required
+            >
+        </div>
+        
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+                id="description"
+                name="listing[description]"
+                rows="4"
+            ><%= result.description %></textarea>
+        </div>
+        <div class="form-group">
+    <label>Current Image</label>
+    <img src="<%= result.image.url %>" class="preview-img">
+       </div>
+
+        <div class="form-group">
+            <label for="image">Upload new Image</label>
+            <input
+                type="file"
+                id="image"
+                name="listing[image]"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input
+                type="text"
+                id="location"
+                name="listing[location]"
+                value="<%= result.location %>"
+            >
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input
+                    type="number"
+                    id="price"
+                    name="listing[price]"
+                    value="<%= result.price %>"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    id="country"
+                    name="listing[country]"
+                    value="<%= result.country %>"
+                >
+            </div>
+
+        </div>
+
+        <button class="submit-btn" type="submit">Update Listing</button>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

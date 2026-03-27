@@ -1,0 +1,166 @@
+<% layout("layouts/boiler") -%>
+
+<style>
+/* 🔥 MAIN CONTAINER (fix full width issue) */
+.main-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 🔥 FILTER WRAPPER */
+.filter-wrapper {
+  margin: 10px;
+}
+
+/* 🔥 FILTER BAR */
+#filter {
+  display: flex;
+  gap: 20px;
+  padding: 10px 5px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  border-bottom: 1px solid #b2adad;
+}
+
+/* hide scrollbar */
+#filter::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🔥 EACH FILTER */
+.filter {
+  min-width: 80px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+/* 🔥 LINK STYLE */
+.filter a {
+  text-decoration: none;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* 🔥 ICON */
+.filter i {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* 🔥 HOVER EFFECT */
+.filter:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+</style>
+
+<div class="main-container">
+
+  <!-- FILTER -->
+  <div class="filter-wrapper">
+    <div id="filter">
+
+      <div class="filter">
+        <a href="/listing">
+          <i class="fa-solid fa-fire"></i>
+          Trending
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Rooms">
+          <i class="fa-solid fa-bed"></i>
+          Rooms
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Mountain">
+          <i class="fa-solid fa-mountain-city"></i>
+          Mountain
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Castle">
+          <i class="fa-brands fa-fort-awesome"></i>
+          Castle
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Beach">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          Beach
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Farm">
+          <i class="fa-solid fa-tractor"></i>
+          Farm
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Arctic">
+          <i class="fa-regular fa-snowflake"></i>
+          Arctic
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Camping">
+          <i class="fa-solid fa-person-hiking"></i>
+          Camping
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listing?category=Forest">
+          <i class="fa-solid fa-tree"></i>
+          Forest
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LISTINGS -->
+  <div class="listing-container">
+
+    <% result.forEach((el)=>{ %>
+
+    <a href="/listing/show/<%= el._id %>" class="card-link">
+      <div class="listing-card index">
+
+        <img src="<%= el.image.url %>?w=500&auto=format&fit=crop&q=60" loading="lazy" alt="listing">
+
+        <div class="card-info">
+          <h3><%= el.title %></h3>
+          <p>₹ <%= el.price %></p>
+        </div>
+
+      </div>
+    </a>
+
+    <% }) %>
+
+  </div>
+
+</div>
