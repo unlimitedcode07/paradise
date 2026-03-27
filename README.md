@@ -45,23 +45,20 @@ middleware/ → Authentication & validation
 ## ⚙️ Installation & Setup
 
 ### 1. Clone repository
-```bash
 git clone https://github.com/unlimitedcode07/paradise.git
 
-2. Move into project
-cd paradise
 
-3. Install dependencies
+## 2. Install dependencies
 npm install
 
-4. Create .env file
+## 3. Create .env file
 MONGO_URL=your_mongodb_connection
 CLOUDINARY_NAME=your_cloud_name
 CLOUDINARY_KEY=your_key
 CLOUDINARY_SECRET=your_secret
 
-5. Run project
+## 4. Run project
 npm start
 
-6. Open in browser
+## 6. Open in browser
 http://localhost:3000
